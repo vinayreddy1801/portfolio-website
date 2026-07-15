@@ -1,13 +1,645 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portfolio-website</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Vinay Reddy — Data & Analytics Engineer. 5+ years at Accenture (Kaiser Permanente). Python · dbt · BigQuery · Airflow · SQL. Open to remote roles worldwide.">
+<meta name="keywords" content="data engineer, analytics engineer, Python, dbt, BigQuery, Airflow, SQL, Tableau, ETL, Vinay Reddy, Accenture, Kaiser Permanente">
+<meta property="og:title" content="Vinay Reddy — Data & Analytics Engineer">
+<meta property="og:description" content="5+ years at Accenture (Kaiser Permanente). Production-grade pipelines. Python · dbt · BigQuery · Airflow. Open to remote worldwide.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://vinayreddy1801.github.io/portfolio-website">
+<title>Vinay Reddy — Data & Analytics Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Vinay Reddy Jakka","jobTitle":"Data & Analytics Engineer","email":"vinay.reddy0118@gmail.com","url":"https://vinayreddy1801.github.io/portfolio-website","sameAs":["https://linkedin.com/in/vinay-reddy-6430333b1","https://github.com/vinayreddy1801"]}</script>
+<style>
+:root{
+  --bg:#080c10;--bg2:#0d1117;--bg3:#161b22;--bg4:#21262d;
+  --border:#21262d;--border2:#30363d;
+  --text:#f0f6fc;--text2:#8b949e;--text3:#6e7681;
+  --g1:#00ff88;--g2:#00d4aa;--g3:#0ea5e9;
+  --accent:#00ff88;--accent2:#00cc6e;
+  --r:14px;--rs:8px;--rx:100px;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+::selection{background:rgba(0,255,136,.2);color:var(--text)}
+
+/* SCROLLBAR */
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px}
+
+/* PROGRESS BAR */
+#progress{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--g1),var(--g3));z-index:1000;transition:width .1s linear;width:0%}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);background:rgba(8,12,16,.8);border-bottom:1px solid var(--border);height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(20px,5vw,60px)}
+.nav-logo{font-size:18px;font-weight:800;letter-spacing:-.03em;display:flex;align-items:center;gap:4px}
+.nav-logo-dot{width:8px;height:8px;border-radius:50%;background:var(--g1);animation:blink 2s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+.nav-menu{display:flex;gap:32px;align-items:center}
+.nav-menu a{font-size:14px;font-weight:500;color:var(--text2);transition:color .2s;position:relative}
+.nav-menu a::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:1px;background:var(--g1);transform:scaleX(0);transition:transform .2s}
+.nav-menu a:hover{color:var(--text)}
+.nav-menu a:hover::after{transform:scaleX(1)}
+.nav-available{display:flex;align-items:center;gap:8px;padding:7px 16px;border:1px solid rgba(0,255,136,.3);border-radius:var(--rx);font-size:13px;font-weight:600;color:var(--g1);background:rgba(0,255,136,.05);cursor:pointer;transition:all .2s}
+.nav-available:hover{background:rgba(0,255,136,.1);border-color:var(--g1)}
+.pulse-dot{width:7px;height:7px;border-radius:50%;background:var(--g1);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(0,255,136,.4)}70%{box-shadow:0 0 0 8px rgba(0,255,136,0)}}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:120px clamp(20px,5vw,60px) 80px;position:relative;overflow:hidden}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,255,136,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,255,136,.03) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 40%,transparent 100%)}
+.hero-glow{position:absolute;top:20%;left:50%;transform:translateX(-50%);width:600px;height:600px;background:radial-gradient(ellipse,rgba(0,255,136,.06) 0%,transparent 70%);pointer-events:none}
+.hero-content{position:relative;z-index:1;max-width:860px}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border:1px solid var(--border2);border-radius:var(--rx);font-size:13px;font-weight:500;color:var(--text2);margin-bottom:28px;font-family:'JetBrains Mono',monospace}
+.hero-tag span{color:var(--g1)}
+.hero h1{font-size:clamp(40px,7vw,80px);font-weight:900;line-height:1.0;letter-spacing:-.04em;margin-bottom:10px}
+.hero-name{color:var(--text)}
+.hero-role{background:linear-gradient(135deg,var(--g1) 0%,var(--g3) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block}
+.hero-typed{font-size:clamp(20px,3vw,28px);font-weight:500;color:var(--text2);margin-bottom:24px;min-height:40px;display:flex;align-items:center;gap:4px}
+.typed-cursor{color:var(--g1);animation:cursor .7s step-end infinite}
+@keyframes cursor{0%,100%{opacity:1}50%{opacity:0}}
+.hero-desc{font-size:clamp(16px,2vw,19px);color:var(--text2);line-height:1.7;max-width:620px;margin-bottom:36px}
+.hero-desc strong{color:var(--text);font-weight:600}
+.hero-companies{display:flex;align-items:center;gap:12px;margin-bottom:36px;flex-wrap:wrap}
+.hero-companies-label{font-size:13px;color:var(--text3);font-family:'JetBrains Mono',monospace}
+.company-badge{padding:6px 16px;border:1px solid var(--border2);border-radius:var(--rs);font-size:13px;font-weight:700;color:var(--text2);background:var(--bg3);transition:all .2s}
+.company-badge:hover{border-color:var(--g1);color:var(--g1)}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:48px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 28px;border-radius:var(--r);font-size:15px;font-weight:700;cursor:pointer;transition:all .2s;font-family:'Outfit',sans-serif;border:none;letter-spacing:-.01em}
+.btn-primary{background:linear-gradient(135deg,var(--g1),var(--g2));color:#080c10}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(0,255,136,.3)}
+.btn-ghost{background:transparent;color:var(--text);border:1px solid var(--border2)}
+.btn-ghost:hover{border-color:var(--g1);color:var(--g1);transform:translateY(-2px)}
+.hero-stack{display:flex;flex-wrap:wrap;gap:8px}
+.stack-chip{font-family:'JetBrains Mono',monospace;font-size:12px;padding:5px 12px;border-radius:var(--rs);background:var(--bg3);border:1px solid var(--border);color:var(--text2);transition:all .15s}
+.stack-chip:hover{border-color:var(--g1);color:var(--g1)}
+
+/* STATS SECTION */
+.stats-section{padding:0 clamp(20px,5vw,60px);margin-bottom:0}
+.stats-row{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
+.stat-box{background:var(--bg2);padding:28px 20px;text-align:center;transition:background .2s}
+.stat-box:hover{background:var(--bg3)}
+.stat-num{font-size:clamp(24px,3vw,36px);font-weight:900;display:block;letter-spacing:-.04em;background:linear-gradient(135deg,var(--g1),var(--g3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.stat-label{font-size:12px;color:var(--text3);margin-top:6px;display:block;line-height:1.4}
+
+/* SECTION */
+.sec{padding:100px clamp(20px,5vw,60px);max-width:1200px;margin:0 auto}
+.sec-label{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--g1);text-transform:uppercase;letter-spacing:.12em;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.sec-label::before{content:'';width:24px;height:1px;background:var(--g1)}
+.sec-title{font-size:clamp(28px,4vw,48px);font-weight:800;letter-spacing:-.03em;margin-bottom:10px;line-height:1.15}
+.sec-sub{font-size:17px;color:var(--text2);max-width:560px;line-height:1.6;margin-bottom:52px}
+
+/* PROJECTS */
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
+.proj-card{background:var(--bg2);padding:28px;display:flex;flex-direction:column;gap:16px;position:relative;transition:background .2s;overflow:hidden}
+.proj-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--g1),var(--g3));transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.proj-card:hover{background:var(--bg3)}
+.proj-card:hover::before{transform:scaleX(1)}
+.proj-head{display:flex;justify-content:space-between;align-items:flex-start}
+.proj-icon{font-size:28px}
+.proj-links{display:flex;gap:8px}
+.proj-link{font-size:12px;font-family:'JetBrains Mono',monospace;padding:5px 12px;border:1px solid var(--border2);border-radius:var(--rs);color:var(--text2);transition:all .15s;display:flex;align-items:center;gap:5px}
+.proj-link:hover{border-color:var(--g1);color:var(--g1);background:rgba(0,255,136,.05)}
+.proj-name{font-size:18px;font-weight:700;letter-spacing:-.02em;line-height:1.3}
+.proj-desc{font-size:14px;color:var(--text2);line-height:1.7;flex:1}
+.proj-stats{display:flex;gap:16px;flex-wrap:wrap;padding:12px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.proj-stat{font-size:12px;font-family:'JetBrains Mono',monospace;color:var(--g1);display:flex;align-items:center;gap:5px}
+.proj-tags{display:flex;flex-wrap:wrap;gap:6px}
+.proj-tag{font-size:11px;font-family:'JetBrains Mono',monospace;padding:4px 10px;border-radius:4px;background:var(--bg4);color:var(--text3);border:1px solid var(--border)}
+
+/* SKILLS */
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.skill-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:22px;transition:border-color .2s}
+.skill-card:hover{border-color:var(--border2)}
+.skill-cat{font-size:12px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.skill-items{display:flex;flex-wrap:wrap;gap:7px}
+.skill-item{font-size:12px;font-family:'JetBrains Mono',monospace;padding:5px 12px;border-radius:var(--rs);background:var(--bg3);border:1px solid var(--border);color:var(--text2);transition:all .15s}
+.skill-item.hot{border-color:rgba(0,255,136,.3);color:var(--g1);background:rgba(0,255,136,.05)}
+.skill-item:hover{border-color:var(--g1);color:var(--g1)}
+
+/* EXPERIENCE */
+.exp-list{display:flex;flex-direction:column;gap:2px}
+.exp-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;transition:border-color .2s}
+.exp-card:hover{border-color:var(--border2)}
+.exp-card-head{padding:24px 28px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;gap:16px}
+.exp-card-left{display:flex;align-items:center;gap:16px}
+.exp-logo{width:40px;height:40px;border-radius:var(--rs);background:var(--bg3);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.exp-card-title{font-size:16px;font-weight:700;letter-spacing:-.01em}
+.exp-card-company{font-size:13px;color:var(--text2);margin-top:2px}
+.exp-card-right{text-align:right;flex-shrink:0}
+.exp-card-period{font-size:12px;font-family:'JetBrains Mono',monospace;color:var(--text3);margin-bottom:6px}
+.exp-card-tag{font-size:11px;padding:3px 10px;border-radius:var(--rx);background:rgba(0,255,136,.08);color:var(--g1);border:1px solid rgba(0,255,136,.2)}
+.exp-card-body{padding:0 28px 24px;border-top:1px solid var(--border)}
+.exp-bullets{list-style:none;margin-top:16px;display:flex;flex-direction:column;gap:8px}
+.exp-bullets li{font-size:14px;color:var(--text2);display:flex;gap:10px;line-height:1.7}
+.exp-bullets li::before{content:"▸";color:var(--g1);flex-shrink:0;margin-top:4px;font-size:10px}
+.exp-tech{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
+.exp-tech-tag{font-size:11px;font-family:'JetBrains Mono',monospace;padding:4px 10px;border-radius:4px;background:var(--bg3);color:var(--text3);border:1px solid var(--border)}
+
+/* EDUCATION */
+.edu-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.edu-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:22px;transition:border-color .2s}
+.edu-card:hover{border-color:var(--border2)}
+.edu-icon{font-size:24px;margin-bottom:12px}
+.edu-deg{font-size:15px;font-weight:700;letter-spacing:-.01em;margin-bottom:4px}
+.edu-school{font-size:13px;color:var(--text2);margin-bottom:12px}
+.edu-badges{display:flex;gap:8px;flex-wrap:wrap}
+.edu-badge{font-size:12px;font-family:'JetBrains Mono',monospace;padding:4px 10px;border-radius:var(--rs);background:var(--bg3);border:1px solid var(--border);color:var(--text2)}
+.edu-badge.gold{border-color:rgba(227,179,65,.4);color:#e3b341;background:rgba(227,179,65,.08)}
+.edu-badge.green{border-color:rgba(0,255,136,.3);color:var(--g1);background:rgba(0,255,136,.05)}
+
+/* CONTACT */
+.contact-wrap{border:1px solid var(--border);border-radius:var(--r);overflow:hidden;background:var(--bg2)}
+.contact-top{padding:60px;background:linear-gradient(135deg,rgba(0,255,136,.04) 0%,rgba(14,165,233,.04) 100%);border-bottom:1px solid var(--border);text-align:center}
+.contact-available{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border:1px solid rgba(0,255,136,.3);border-radius:var(--rx);font-size:13px;font-weight:600;color:var(--g1);margin-bottom:24px;background:rgba(0,255,136,.05)}
+.contact-title{font-size:clamp(28px,4vw,48px);font-weight:900;letter-spacing:-.03em;margin-bottom:12px}
+.contact-sub{font-size:16px;color:var(--text2);margin-bottom:32px}
+.contact-links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.contact-btn{display:flex;align-items:center;gap:8px;padding:13px 24px;border:1px solid var(--border2);border-radius:var(--r);font-size:14px;font-weight:600;color:var(--text);background:var(--bg3);transition:all .2s}
+.contact-btn:hover{border-color:var(--g1);color:var(--g1);transform:translateY(-2px)}
+.contact-bottom{padding:20px 60px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.contact-open{font-size:13px;color:var(--text3);font-family:'JetBrains Mono',monospace}
+.contact-open span{color:var(--g1)}
+
+/* FOOTER */
+footer{border-top:1px solid var(--border);padding:24px clamp(20px,5vw,60px);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-text{font-size:13px;color:var(--text3)}
+.footer-links{display:flex;gap:20px}
+.footer-links a{font-size:13px;color:var(--text3);transition:color .2s}
+.footer-links a:hover{color:var(--g1)}
+
+/* FADE IN */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+.reveal.shown{opacity:1;transform:none}
+
+/* MOBILE */
+@media(max-width:768px){
+  .nav-menu{display:none}
+  .stats-row{grid-template-columns:repeat(3,1fr)}
+  .stats-row .stat-box:nth-child(4),.stats-row .stat-box:nth-child(5){display:none}
+  .projects-grid{grid-template-columns:1fr}
+  .contact-top{padding:40px 24px}
+  .contact-bottom{padding:16px 24px}
+  .exp-card-head{flex-direction:column;align-items:flex-start}
+  .exp-card-right{text-align:left}
+}
+@media(max-width:480px){
+  .hero-ctas{flex-direction:column}
+  .btn{width:100%;justify-content:center}
+}
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <div class="nav-logo-dot"></div>
+    Vinay Reddy
+  </div>
+  <div class="nav-menu">
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a href="mailto:vinay.reddy0118@gmail.com" class="nav-available">
+    <div class="pulse-dot"></div>
+    Available for hire
+  </a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <div class="hero-tag">
+      <span>$</span> data engineer · analytics engineer · data scientist
+    </div>
+    <h1>
+      <span class="hero-name">Vinay Reddy.</span><br>
+      <span class="hero-role">I build data pipelines<br>that actually work.</span>
+    </h1>
+    <div class="hero-typed">
+      <span id="typed-text"></span><span class="typed-cursor">|</span>
+    </div>
+    <p class="hero-desc">
+      5+ years designing and shipping <strong>production-grade data infrastructure</strong> 
+      at enterprise scale — from raw ingestion to trusted, decision-ready datasets. 
+      Currently processing <strong>2–3M+ daily records</strong> at Prowesys. 
+      Previously at <strong>Accenture</strong>, client Kaiser Permanente.
+    </p>
+    <div class="hero-companies">
+      <span class="hero-companies-label">// worked with</span>
+      <span class="company-badge">Accenture</span>
+      <span class="company-badge">Kaiser Permanente</span>
+      <span class="company-badge">University of North Texas</span>
+    </div>
+    <div class="hero-ctas">
+      <a href="mailto:vinay.reddy0118@gmail.com" class="btn btn-primary">✉ &nbsp;Get in touch</a>
+      <a href="https://linkedin.com/in/vinay-reddy-6430333b1" target="_blank" class="btn btn-ghost">LinkedIn →</a>
+      <a href="https://github.com/vinayreddy1801" target="_blank" class="btn btn-ghost">GitHub →</a>
+    </div>
+    <div class="hero-stack">
+      <span class="stack-chip">Python</span><span class="stack-chip">dbt</span>
+      <span class="stack-chip">BigQuery</span><span class="stack-chip">Apache Airflow</span>
+      <span class="stack-chip">SQL</span><span class="stack-chip">Spark</span>
+      <span class="stack-chip">Tableau</span><span class="stack-chip">Streamlit</span>
+      <span class="stack-chip">GCP</span><span class="stack-chip">AWS</span>
+      <span class="stack-chip">Docker</span><span class="stack-chip">PostgreSQL</span>
+      <span class="stack-chip">Kafka</span><span class="stack-chip">scikit-learn</span>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-section">
+  <div class="stats-row">
+    <div class="stat-box"><span class="stat-num">5+</span><span class="stat-label">Years experience</span></div>
+    <div class="stat-box"><span class="stat-num">2–3M+</span><span class="stat-label">Daily records processed</span></div>
+    <div class="stat-box"><span class="stat-num">4.0</span><span class="stat-label">MS Data Science GPA</span></div>
+    <div class="stat-box"><span class="stat-num">72</span><span class="stat-label">DQ tests passing</span></div>
+    <div class="stat-box"><span class="stat-num">12M+</span><span class="stat-label">Members served (KP)</span></div>
+  </div>
+</div>
+
+<!-- PROJECTS -->
+<div class="sec reveal" id="projects">
+  <div class="sec-label">featured work</div>
+  <h2 class="sec-title">Things I've shipped.</h2>
+  <p class="sec-sub">Real systems. Production data. Live demos you can click.</p>
+  <div class="projects-grid">
+
+    <div class="proj-card">
+      <div class="proj-head">
+        <span class="proj-icon">🏭</span>
+        <div class="proj-links">
+          <a href="https://github.com/vinayreddy1801/manufacturing-telemetry-pipeline" target="_blank" class="proj-link">↗ GitHub</a>
+          <a href="https://manufacturing-telemetry-pipeline-4w4vdqqcqswwtjyhctzsyb.streamlit.app/" target="_blank" class="proj-link">⚡ Live</a>
+        </div>
+      </div>
+      <div class="proj-name">Industrial IoT Telemetry Pipeline</div>
+      <div class="proj-desc">Event-driven data pipeline ingesting continuous 1Hz telemetry streams from simulated industrial hardware. PostgreSQL schema with compound B-Tree indexing, Sentinel monitoring microservice for anomaly detection, GitHub Actions CI/CD, and Docker containerization — end-to-end production-ready data engineering.</div>
+      <div class="proj-stats">
+        <span class="proj-stat">⚡ Sub-200ms latency</span>
+        <span class="proj-stat">📉 95% query cost cut</span>
+        <span class="proj-stat">🔁 Hourly CI/CD</span>
+      </div>
+      <div class="proj-tags">
+        <span class="proj-tag">Python</span><span class="proj-tag">PostgreSQL</span>
+        <span class="proj-tag">Docker</span><span class="proj-tag">GitHub Actions</span>
+        <span class="proj-tag">Streamlit</span><span class="proj-tag">CI/CD</span>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-head">
+        <span class="proj-icon">🔬</span>
+        <div class="proj-links">
+          <a href="https://github.com/vinayreddy1801/healthcare-risk-analytics" target="_blank" class="proj-link">↗ GitHub</a>
+          <a href="https://healthcare-risk-analytics-vo5zsvkmymeiwoyhec9gzb.streamlit.app/" target="_blank" class="proj-link">⚡ Live</a>
+        </div>
+      </div>
+      <div class="proj-name">Population Health Risk Stratification Pipeline</div>
+      <div class="proj-desc">End-to-end analytics pipeline — BigQuery + dbt + Airflow + Streamlit. SNOMED-CT condition mapping, HCC risk scoring, HEDIS care gap analysis, and 72 passing data quality tests across staging → intermediate → mart layers. Live 4-tab dashboard with GCP BigQuery authentication.</div>
+      <div class="proj-stats">
+        <span class="proj-stat">👥 1,171 patients stratified</span>
+        <span class="proj-stat">✅ 72 DQ tests</span>
+        <span class="proj-stat">🔄 3 Airflow DAGs</span>
+      </div>
+      <div class="proj-tags">
+        <span class="proj-tag">Python</span><span class="proj-tag">dbt</span>
+        <span class="proj-tag">BigQuery</span><span class="proj-tag">Airflow</span>
+        <span class="proj-tag">GCP</span><span class="proj-tag">Streamlit</span>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-head">
+        <span class="proj-icon">🛡️</span>
+        <div class="proj-links">
+          <a href="https://github.com/vinayreddy1801/Cybersecurity_Attacks_Analysis" target="_blank" class="proj-link">↗ GitHub</a>
+        </div>
+      </div>
+      <div class="proj-name">Cybersecurity Attacks Intelligence Analysis</div>
+      <div class="proj-desc">Analysed 40,000+ cybersecurity incidents using Python and Tableau to surface attack patterns, threat vectors, and frequency trends. Delivered interactive dashboards translating complex security data into clear, executive-ready insights.</div>
+      <div class="proj-stats">
+        <span class="proj-stat">🔍 40,000+ incidents</span>
+        <span class="proj-stat">📊 Interactive dashboards</span>
+      </div>
+      <div class="proj-tags">
+        <span class="proj-tag">Python</span><span class="proj-tag">Tableau</span>
+        <span class="proj-tag">EDA</span><span class="proj-tag">Data Visualization</span><span class="proj-tag">Jupyter</span>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-head">
+        <span class="proj-icon">📈</span>
+        <div class="proj-links">
+          <a href="https://github.com/vinayreddy1801/marketing-analytics" target="_blank" class="proj-link">↗ GitHub</a>
+        </div>
+      </div>
+      <div class="proj-name">Marketing Analytics Platform</div>
+      <div class="proj-desc">Python-based marketing analytics platform for customer segmentation, campaign performance analysis, and conversion funnel modelling. Transforms raw marketing data into actionable growth and retention insights.</div>
+      <div class="proj-stats">
+        <span class="proj-stat">🎯 Customer segmentation</span>
+        <span class="proj-stat">🔀 Funnel modelling</span>
+      </div>
+      <div class="proj-tags">
+        <span class="proj-tag">Python</span><span class="proj-tag">pandas</span>
+        <span class="proj-tag">scikit-learn</span><span class="proj-tag">Visualization</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SKILLS -->
+<div class="sec reveal" id="skills" style="padding-top:0">
+  <div class="sec-label">skills</div>
+  <h2 class="sec-title">The full stack.</h2>
+  <p class="sec-sub">From ingestion to insight — everything in between.</p>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-cat">🐍 Languages</div>
+      <div class="skill-items">
+        <span class="skill-item hot">Python</span>
+        <span class="skill-item hot">SQL</span>
+        <span class="skill-item">R</span>
+        <span class="skill-item">SAS</span>
+        <span class="skill-item">VBA</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-cat">🔧 Data Engineering</div>
+      <div class="skill-items">
+        <span class="skill-item hot">dbt Core</span>
+        <span class="skill-item hot">Apache Airflow</span>
+        <span class="skill-item hot">Spark / PySpark</span>
+        <span class="skill-item">Kafka</span>
+        <span class="skill-item">ETL / ELT</span>
+        <span class="skill-item">CI/CD</span>
+        <span class="skill-item">Docker</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-cat">☁️ Cloud & Databases</div>
+      <div class="skill-items">
+        <span class="skill-item hot">BigQuery</span>
+        <span class="skill-item hot">GCP</span>
+        <span class="skill-item">Snowflake</span>
+        <span class="skill-item">PostgreSQL</span>
+        <span class="skill-item">AWS</span>
+        <span class="skill-item">Redshift</span>
+        <span class="skill-item">MS Access</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-cat">📊 Visualization</div>
+      <div class="skill-items">
+        <span class="skill-item hot">Tableau</span>
+        <span class="skill-item hot">Streamlit</span>
+        <span class="skill-item">Power BI</span>
+        <span class="skill-item">matplotlib</span>
+        <span class="skill-item">seaborn</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-cat">🤖 Data Science & ML</div>
+      <div class="skill-items">
+        <span class="skill-item hot">pandas</span>
+        <span class="skill-item hot">NumPy</span>
+        <span class="skill-item">scikit-learn</span>
+        <span class="skill-item">Statistical Analysis</span>
+        <span class="skill-item">EDA</span>
+        <span class="skill-item">Predictive Modeling</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-cat">⚙️ Practices</div>
+      <div class="skill-items">
+        <span class="skill-item hot">Data Modeling</span>
+        <span class="skill-item">Data Quality Testing</span>
+        <span class="skill-item">Data Lineage</span>
+        <span class="skill-item">Source-to-Target Reconciliation</span>
+        <span class="skill-item">Git / GitHub</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- EXPERIENCE -->
+<div class="sec reveal" id="experience" style="padding-top:0">
+  <div class="sec-label">experience</div>
+  <h2 class="sec-title">Where I've worked.</h2>
+  <p class="sec-sub">Enterprise scale. Production systems. Real impact.</p>
+  <div class="exp-list">
+
+    <div class="exp-card">
+      <div class="exp-card-head">
+        <div class="exp-card-left">
+          <div class="exp-logo">🏢</div>
+          <div>
+            <div class="exp-card-title">Analytics Engineer</div>
+            <div class="exp-card-company">Prowesys Inc · Remote, United States</div>
+          </div>
+        </div>
+        <div class="exp-card-right">
+          <div class="exp-card-period">Apr 2025 – Present</div>
+          <span class="exp-card-tag">Current</span>
+        </div>
+      </div>
+      <div class="exp-card-body">
+        <ul class="exp-bullets">
+          <li>Designed and enforced a dbt test suite and CI/CD data quality framework — null rate checks, schema-drift alerts, volume monitors, and source freshness monitoring — cutting escalations by 35%</li>
+          <li>Architecting production-grade ELT pipelines — staging → intermediate → marts — with automated data lineage and schema tests for 15+ downstream analytics consumers across 3+ client engagements</li>
+          <li>Translating complex business requirements from diverse data sources into reusable, documented dbt models — eliminating source-of-truth conflicts across analytics teams</li>
+        </ul>
+        <div class="exp-tech">
+          <span class="exp-tech-tag">Python</span><span class="exp-tech-tag">dbt</span>
+          <span class="exp-tech-tag">Airflow</span><span class="exp-tech-tag">BigQuery</span>
+          <span class="exp-tech-tag">Snowflake</span><span class="exp-tech-tag">SQL</span><span class="exp-tech-tag">CI/CD</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-card-head">
+        <div class="exp-card-left">
+          <div class="exp-logo">🎓</div>
+          <div>
+            <div class="exp-card-title">Student Assistant, Data Analytics</div>
+            <div class="exp-card-company">University of North Texas · Denton, Texas</div>
+          </div>
+        </div>
+        <div class="exp-card-right">
+          <div class="exp-card-period">Apr 2023 – Dec 2024</div>
+        </div>
+      </div>
+      <div class="exp-card-body">
+        <ul class="exp-bullets">
+          <li>Built Python and SQL analytical workflows for faculty research — including NFL performance analysis on 500,000+ play-level records across 10 seasons</li>
+          <li>Built a cybersecurity attacks analysis project independently — 40,000+ incidents, Python + Tableau</li>
+          <li>Applied statistical analysis, EDA, and dimensional modelling across multiple research domains</li>
+        </ul>
+        <div class="exp-tech">
+          <span class="exp-tech-tag">Python</span><span class="exp-tech-tag">SQL</span>
+          <span class="exp-tech-tag">Tableau</span><span class="exp-tech-tag">Statistical Analysis</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-card-head">
+        <div class="exp-card-left">
+          <div class="exp-logo">💼</div>
+          <div>
+            <div class="exp-card-title">Data Analyst — Clinical & Regulated Systems</div>
+            <div class="exp-card-company">Accenture · Client: Kaiser Permanente · Hyderabad, India</div>
+          </div>
+        </div>
+        <div class="exp-card-right">
+          <div class="exp-card-period">Jan 2021 – Dec 2022</div>
+        </div>
+      </div>
+      <div class="exp-card-body">
+        <ul class="exp-bullets">
+          <li>Queried 2–3M+ daily EHR rows using Epic Clarity SQL and KB SQL — extracting clinical, pharmacy, and membership data from Kaiser Permanente's Epic environment (12M+ member population)</li>
+          <li>Engineered Access-based ETL workflows across 60+ column schemas — delivered 50–60 monthly HEDIS quality, utilisation, and care management reports</li>
+          <li>Built Epic ClinDoc dashboards and Clarity-based reporting pipelines surfacing HEDIS compliance and care gap rates</li>
+          <li>Performed source-to-target reconciliation across Epic Clarity feeds — reducing repeat data defects by 25%</li>
+        </ul>
+        <div class="exp-tech">
+          <span class="exp-tech-tag">Epic Clarity SQL</span><span class="exp-tech-tag">KB SQL</span>
+          <span class="exp-tech-tag">ETL</span><span class="exp-tech-tag">HEDIS</span>
+          <span class="exp-tech-tag">Tableau</span><span class="exp-tech-tag">MS Access</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- EDUCATION -->
+  <div style="margin-top:40px">
+    <div class="edu-row">
+      <div class="edu-card">
+        <div class="edu-icon">🎓</div>
+        <div class="edu-deg">MS in Data Science</div>
+        <div class="edu-school">University of North Texas</div>
+        <div class="edu-badges">
+          <span class="edu-badge gold">GPA 4.0</span>
+          <span class="edu-badge">2023 – 2024</span>
+        </div>
+      </div>
+      <div class="edu-card">
+        <div class="edu-icon">🔬</div>
+        <div class="edu-deg">BE in Mechanical Engineering</div>
+        <div class="edu-school">Osmania University</div>
+        <div class="edu-badges">
+          <span class="edu-badge gold">GPA 3.7</span>
+          <span class="edu-badge">2017 – 2021</span>
+        </div>
+      </div>
+      <div class="edu-card">
+        <div class="edu-icon">🏆</div>
+        <div class="edu-deg">Epic ClinDoc Module Certification</div>
+        <div class="edu-school">Epic Systems</div>
+        <div class="edu-badges">
+          <span class="edu-badge green">Certified</span>
+          <span class="edu-badge">May 2022</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div class="sec reveal" id="contact" style="padding-top:0">
+  <div class="contact-wrap">
+    <div class="contact-top">
+      <div class="contact-available"><div class="pulse-dot"></div>Available for hire — immediately</div>
+      <div class="contact-title">Let's build something together.</div>
+      <div class="contact-sub">Open to Data Engineer · Analytics Engineer · Data Analyst · Data Scientist roles<br>Remote or on-site · US · Canada · UK · EU · Australia · Worldwide</div>
+      <div class="contact-links">
+        <a href="mailto:vinay.reddy0118@gmail.com" class="contact-btn">✉ vinay.reddy0118@gmail.com</a>
+        <a href="https://linkedin.com/in/vinay-reddy-6430333b1" target="_blank" class="contact-btn">LinkedIn →</a>
+        <a href="https://github.com/vinayreddy1801" target="_blank" class="contact-btn">GitHub →</a>
+      </div>
+    </div>
+    <div class="contact-bottom">
+      <span class="contact-open">open to: <span>remote · on-site · relocation · worldwide</span></span>
+      <span class="contact-open">response within: <span>24 hours</span></span>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-text">© 2026 Vinay Reddy Jakka · Data & Analytics Engineer</div>
+  <div class="footer-links">
+    <a href="https://linkedin.com/in/vinay-reddy-6430333b1" target="_blank">LinkedIn</a>
+    <a href="https://github.com/vinayreddy1801" target="_blank">GitHub</a>
+    <a href="mailto:vinay.reddy0118@gmail.com">Email</a>
+  </div>
+</footer>
+
+<script>
+// SCROLL PROGRESS
+window.addEventListener('scroll',()=>{
+  const el=document.getElementById('progress');
+  const h=document.documentElement.scrollHeight-window.innerHeight;
+  el.style.width=(window.scrollY/h*100)+'%';
+});
+
+// TYPED ANIMATION
+const phrases=[
+  'Python · dbt · BigQuery · Airflow',
+  'ETL/ELT pipelines at enterprise scale',
+  'data quality frameworks · CI/CD',
+  'Tableau · Streamlit · Power BI',
+  'open to remote roles worldwide'
+];
+let pi=0,ci=0,deleting=false,wait=0;
+const el=document.getElementById('typed-text');
+function type(){
+  if(wait>0){wait--;setTimeout(type,80);return;}
+  const phrase=phrases[pi];
+  if(!deleting){
+    el.textContent=phrase.slice(0,ci+1);
+    ci++;
+    if(ci===phrase.length){deleting=true;wait=25;}
+    setTimeout(type,50);
+  } else {
+    el.textContent=phrase.slice(0,ci-1);
+    ci--;
+    if(ci===0){deleting=false;pi=(pi+1)%phrases.length;wait=5;}
+    setTimeout(type,30);
+  }
+}
+type();
+
+// REVEAL ON SCROLL
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('shown');observer.unobserve(e.target);}});
+},{threshold:0.08});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+// NAV ACTIVE
+const sections=document.querySelectorAll('[id]');
+const links=document.querySelectorAll('.nav-menu a');
+window.addEventListener('scroll',()=>{
+  let cur='';
+  sections.forEach(s=>{if(window.scrollY>=s.offsetTop-120)cur=s.id;});
+  links.forEach(a=>{a.style.color=a.getAttribute('href')==='#'+cur?'var(--g1)':'';});
+});
+</script>
+</body>
 </html>
